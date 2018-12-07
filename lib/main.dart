@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'list_movie.dart';
+import 'package:movie_apps/home_page.dart';
 
 void main() => runApp(new MyApp());
 
@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Movie App',
-      home: new ListMovie(),
+      home: new HomePage(),
 
     );
   }

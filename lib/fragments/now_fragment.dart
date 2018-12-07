@@ -3,11 +3,11 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-class ListMovie extends StatefulWidget {
-  _ListMovieState createState() => _ListMovieState();
+class NowPlayingFragment extends StatefulWidget {
+  _NowPlayingFragmentState createState() => _NowPlayingFragmentState();
 }
 
-class _ListMovieState extends State<ListMovie> {
+class _NowPlayingFragmentState extends State<NowPlayingFragment> {
  
   var movies;
   Color mainColor = const Color(0xff3C3261);
@@ -27,32 +27,11 @@ class _ListMovieState extends State<ListMovie> {
 
     return new Scaffold(
       backgroundColor: Colors.white,
-      appBar: new AppBar(
-        elevation: 0.3,
-        centerTitle: true,
-        backgroundColor: Colors.white,
-        leading: new Icon(
-          Icons.home,
-          color: mainColor,
-        ),
-        title: new Text(
-          'Movies',
-          style: new TextStyle(
-          color: mainColor,
-          fontFamily:'Arvo',
-          fontWeight: FontWeight.bold)
-        ),
-        actions: <Widget>[
-          new Icon(Icons.menu,
-          color: mainColor)
-        ],
-      ),
       body: new Padding(
         padding: const EdgeInsets.all(16.0),
         child: new Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            new MovieTitle(mainColor),
             new Expanded(
               child: new ListView.builder(
                 itemCount: movies == null ? 0 : movies.length,
@@ -114,7 +93,6 @@ class MovieCell extends StatelessWidget {
               ),
             ),
             new Expanded(
-
                 child: new Container(
                   margin: const EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 0.0),
                   child: new Column(children: <Widget>[
@@ -152,29 +130,29 @@ class MovieCell extends StatelessWidget {
 
 }
 
-class MovieTitle extends StatelessWidget {
+// class MovieTitle extends StatelessWidget {
   
-  final Color mainColor;
-  MovieTitle(this.mainColor);
+//   final Color mainColor;
+//   MovieTitle(this.mainColor);
 
-  @override
-  Widget build(BuildContext context) {
-    return new Padding(
-      padding: const EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
-      child: new Text(
-        'Now Playing',
-        style: new TextStyle(
-          fontSize: 40.0,
-          color: mainColor,
-          fontWeight: FontWeight.bold,
-          fontFamily: 'Arvo'
-        ),
-        textAlign: TextAlign.left,
-      ),
+//   @override
+//   Widget build(BuildContext context) {
+//     return new Padding(
+//       padding: const EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
+//       child: new Text(
+//         'Now Playing',
+//         style: new TextStyle(
+//           fontSize: 40.0,
+//           color: mainColor,
+//           fontWeight: FontWeight.bold,
+//           fontFamily: 'Arvo'
+//         ),
+//         textAlign: TextAlign.left,
+//       ),
       
-    );
-  }
-}
+//     );
+//   }
+// }
 
 Future<Map> getJson() async {
   var url =
