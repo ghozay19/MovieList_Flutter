@@ -5,7 +5,7 @@ This App is using API from TheMovieDb.com & Build with Flutter :love:
 ## Feature in this app
 
 - Now Playing Movies
-- Up Coming Movies (soon)
+- Up Coming Movies 
 - Favorite Movies (soon)
 
 

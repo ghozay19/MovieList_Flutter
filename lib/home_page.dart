@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
               child: DrawerHeader(
                 child: Center(
                     child: Text(
-                        'Hi',
+                        'Movies App',
                       style: TextStyle(fontSize: 24.0, color: Colors.white),
                     )
                 ),
@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
                 Navigator.of(context).pop();
                 updatePage(0 , 'Now Playing');
               },
-              leading: Icon(Icons.today),
+              leading: Icon(Icons.play_arrow),
               title: Text('Now Playing'),
             ),
             ListTile(

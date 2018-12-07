@@ -27,6 +27,7 @@ class _NowPlayingFragmentState extends State<NowPlayingFragment> {
 
     return new Scaffold(
       backgroundColor: Colors.white,
+
       body: new Padding(
         padding: const EdgeInsets.all(16.0),
         child: new Column(
@@ -93,6 +94,7 @@ class MovieCell extends StatelessWidget {
               ),
             ),
             new Expanded(
+
                 child: new Container(
                   margin: const EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 0.0),
                   child: new Column(children: <Widget>[
